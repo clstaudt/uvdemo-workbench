@@ -2,6 +2,18 @@
 
 Development workbench for the uvtest library.
 
+## Project Structure
+
+Both repositories should be cloned side-by-side in the same parent directory:
+
+```
+parent-directory/
+├── uvtest/           # The main library
+└── uvtest-workbench/ # This workbench (imports uvtest as editable dependency)
+```
+
+The workbench uses `uvtest` as an editable dependency via `path = "../uvtest"`.
+
 ## Setup
 
 ```bash
@@ -12,17 +24,13 @@ This will:
 - Install all dependencies (including uvtest as an editable dependency)
 - Configure nbdime for better notebook diff and merge operations
 
-## Usage
+### Alternative (without just)
+
+If `just` is not available, run these commands directly:
 
 ```bash
-# Start Jupyter Lab
-just lab
-
-# Start Jupyter Notebook
-just notebook
-
-# Sync dependencies only
-just sync
+uv sync
+uv run nbdime config-git --enable
 ```
 
 ## Features
