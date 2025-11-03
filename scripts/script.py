@@ -1,6 +1,6 @@
 from rich.console import Console
 
-from uvtest.library import output_greeting, work_work
+from uvdemo.library import output_greeting, work_work
 
 console = Console()
 

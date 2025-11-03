@@ -1,6 +1,6 @@
-# uvtest-workbench
+# uvdemo-workbench
 
-Development workbench for the uvtest library.
+Development workbench for the uvdemo library.
 
 ## Project Structure
 
@@ -8,11 +8,11 @@ Both repositories should be cloned side-by-side in the same parent directory:
 
 ```
 parent-directory/
-├── uvtest/           # The main library
-└── uvtest-workbench/ # This workbench (imports uvtest as editable dependency)
+├── uvdemo/           # The main library
+└── uvdemo-workbench/ # This workbench (imports uvdemo as editable dependency)
 ```
 
-The workbench uses `uvtest` as an editable dependency via `path = "../uvtest"`.
+The workbench uses `uvdemo` as an editable dependency via `path = "../uvdemo"`.
 
 ## Setup
 
@@ -21,7 +21,7 @@ just setup
 ```
 
 This will:
-- Install all dependencies (including uvtest as an editable dependency)
+- Install all dependencies (including uvdemo as an editable dependency)
 - Configure nbdime for better notebook diff and merge operations
 
 ### Alternative (without just)
@@ -36,6 +36,6 @@ uv run nbdime config-git --enable
 ## Features
 
 - Notebooks use `nbdime` for git diff and merge operations
-- Imports `uvtest` as an editable dependency from `../uvtest`
-- All dependencies are automatically inherited from uvtest
+- Imports `uvdemo` as an editable dependency from `../uvdemo`
+- All dependencies are automatically inherited from uvdemo
 

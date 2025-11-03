@@ -1,5 +1,5 @@
 def main():
-    print("Hello from uvtest-workbench!")
+    print("Hello from uvdemo-workbench!")
 
 
 if __name__ == "__main__":
