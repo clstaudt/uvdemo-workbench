@@ -33,6 +33,6 @@
     }
   },
   
-  "postCreateCommand": "uv sync"
+  "postCreateCommand": "cd /workspaces/uvdemo-workbench && uv sync"
 }
 
