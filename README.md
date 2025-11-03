@@ -1,6 +1,8 @@
 # uvdemo-workbench
 
-Development workbench for the uvdemo library.
+**Demo repository** showcasing a development workbench setup with uv.
+
+This is a companion workbench for the uvdemo library, designed to demonstrate the **production repo + workbench repo pattern** for interactive development, testing, and experimentation with uv's editable dependencies.
 
 ## Project Structure
 
@@ -35,7 +37,10 @@ uv run nbdime config-git --enable
 
 ## Features
 
-- Notebooks use `nbdime` for git diff and merge operations
-- Imports `uvdemo` as an editable dependency from `../uvdemo`
-- All dependencies are automatically inherited from uvdemo
+This demo workbench illustrates:
+- Using a production library as an **editable dependency** with uv
+- Notebooks with `nbdime` for better git diff and merge operations
+- Scripts and notebooks that can test library changes in real-time
+- Clean separation between production code and development/testing environment
+- Automatic dependency inheritance from the main library
 
