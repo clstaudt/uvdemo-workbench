@@ -1171,9 +1171,9 @@ wheels = [
 ]
 
 [[package]]
-name = "uvtest"
+name = "uvdemo"
 version = "0.1.0"
-source = { editable = "../uvtest" }
+source = { editable = "../uvdemo" }
 dependencies = [
     { name = "halo" },
     { name = "rich" },
@@ -1185,21 +1185,24 @@ requires-dist = [
     { name = "rich", specifier = ">=14.2.0" },
 ]
 
+[package.metadata.requires-dev]
+dev = [{ name = "pytest", specifier = ">=8.3.4" }]
+
 [[package]]
-name = "uvtest-workbench"
+name = "uvdemo-workbench"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "ipykernel" },
     { name = "nbdime" },
-    { name = "uvtest" },
+    { name = "uvdemo" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "ipykernel", specifier = ">=6.29.0" },
     { name = "nbdime", specifier = ">=4.0.0" },
-    { name = "uvtest", editable = "../uvtest" },
+    { name = "uvdemo", editable = "../uvdemo" },
 ]
 
 [[package]]

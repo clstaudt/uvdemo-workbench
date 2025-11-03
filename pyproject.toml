@@ -1,14 +1,14 @@
 [project]
-name = "uvtest-workbench"
+name = "uvdemo-workbench"
 version = "0.1.0"
-description = "Development workbench for uvtest"
+description = "Development workbench for uvdemo"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 dependencies = [
-    "uvtest",
+    "uvdemo",
     "ipykernel>=6.29.0",
     "nbdime>=4.0.0",
 ]
 
 [tool.uv.sources]
-uvtest = { path = "../uvtest", editable = true }
+uvdemo = { path = "../uvdemo", editable = true }
