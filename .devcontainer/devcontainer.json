@@ -22,13 +22,7 @@
         "ms-toolsai.jupyter"
       ],
       "settings": {
-        "python.defaultInterpreterPath": "/workspaces/uvdemo-workbench/.venv/bin/python",
-        "jupyter.kernels.filter": [
-          {
-            "path": "/workspaces/uvdemo-workbench/.venv/bin/python",
-            "type": "pythonEnvironment"
-          }
-        ]
+        "python.defaultInterpreterPath": "/workspaces/uvdemo-workbench/.venv/bin/python"
       }
     }
   },
