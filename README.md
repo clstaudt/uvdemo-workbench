@@ -19,27 +19,31 @@ The workbench uses `uvdemo` as an editable dependency via `path = "../uvdemo"`.
 ## Setup
 
 ```bash
-just setup
-```
-
-This will:
-- Install all dependencies (including uvdemo as an editable dependency)
-- Configure nbdime for better notebook diff and merge operations
-
-### Alternative (without just)
-
-If `just` is not available, run these commands directly:
-
-```bash
 uv sync
-uv run nbdime config-git --enable
 ```
+
+This will install all dependencies (including uvdemo as an editable dependency).
+
+## Dev Container Support
+
+This workbench includes a devcontainer configuration that:
+- Inherits the base setup from `uvdemo`
+- Mounts **both repositories side-by-side** in the container
+- Adds Jupyter extension support
+- Automatically runs `uv sync` on container creation
+
+To use:
+1. Ensure both repos are cloned side-by-side locally
+2. Open `uvdemo-workbench` in VS Code with Dev Containers extension
+3. Reopen in container - both repos will be available at `/workspaces/`
+
+The side-by-side mounting preserves the `path = "../uvdemo"` editable dependency setup.
 
 ## Features
 
 This demo workbench illustrates:
 - Using a production library as an **editable dependency** with uv
-- Notebooks with `nbdime` for better git diff and merge operations
+- Interactive notebooks for testing and experimentation
 - Scripts and notebooks that can test library changes in real-time
 - Clean separation between production code and development/testing environment
 - Automatic dependency inheritance from the main library

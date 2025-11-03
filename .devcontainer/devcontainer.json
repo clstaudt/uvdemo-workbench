@@ -1,0 +1,38 @@
+{
+  "name": "uvdemo-workbench",
+  
+  // Inherit base image from uvdemo
+  "build": {
+    "dockerfile": "../../uvdemo/.devcontainer/Dockerfile"
+  },
+  
+  // Mount both repositories side-by-side
+  "workspaceFolder": "/workspaces/uvdemo-workbench",
+  "mounts": [
+    "source=${localWorkspaceFolder}/../uvdemo,target=/workspaces/uvdemo,type=bind,consistency=cached"
+  ],
+  
+  // Extend base extensions with Jupyter
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/workspaces/uvdemo-workbench/.venv/bin/python",
+        "jupyter.kernels.filter": [
+          {
+            "path": "/workspaces/uvdemo-workbench/.venv/bin/python",
+            "type": "pythonEnvironment"
+          }
+        ]
+      }
+    }
+  },
+  
+  "postCreateCommand": "uv sync"
+}
+
